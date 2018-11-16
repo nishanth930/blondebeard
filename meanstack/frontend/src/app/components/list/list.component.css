@@ -1,0 +1,10 @@
+table{
+    width:100%;
+    background-color:rgb(70, 68, 70);
+}
+.mat-column-right{
+    text-align: center;
+}
+.mat-card {
+    background-color:rgb(219, 216, 219);
+}
