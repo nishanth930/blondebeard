@@ -1,0 +1,117 @@
+<mat-card>
+  
+
+    <table mat-table [dataSource]="dataSource" class="table table-striped table-bordered">
+      <ng-container matColumnDef="shippingType">
+        <th mat-header-cell *matHeaderCellDef>Shipping Type</th>
+        <td mat-cell *matCellDef="let invo"> {{invo.shippingType}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="Country">
+        <th mat-header-cell *matHeaderCellDef> From Country </th>
+        <td mat-cell *matCellDef="let invo"> {{invo.Country}} </td>
+      </ng-container>
+      <ng-container matColumnDef="City">
+        <th mat-header-cell *matHeaderCellDef> From City </th>
+        <td mat-cell *matCellDef="let invo"> {{invo.City}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="State">
+        <th mat-header-cell *matHeaderCellDef> From State </th>
+        <td mat-cell *matCellDef="let invo"> {{invo.State}} </td>
+      </ng-container>
+      <ng-container matColumnDef="Postal">
+        <th mat-header-cell *matHeaderCellDef> From Postal code </th>
+        <td mat-cell *matCellDef="let invo"> {{invo.Postal}} </td>
+      </ng-container>
+      <ng-container matColumnDef="departure">
+        <th mat-header-cell *matHeaderCellDef> Departure</th>
+        <td mat-cell *matCellDef="let invo"> {{invo.departure}} </td>
+      </ng-container>
+  
+      <ng-container matColumnDef="country">
+        <th mat-header-cell *matHeaderCellDef> To Country </th>
+        <td mat-cell *matCellDef="let invo"> {{invo.country}} </td>
+      </ng-container>
+    
+      <ng-container matColumnDef="city">
+        <th mat-header-cell *matHeaderCellDef> To City </th>
+        <td mat-cell *matCellDef="let invo"> {{invo.city}} </td>
+      </ng-container>
+      <ng-container matColumnDef="state">
+        <th mat-header-cell *matHeaderCellDef> To State </th>
+        <td mat-cell *matCellDef="let invo"> {{invo.state}} </td>
+      </ng-container>
+      <ng-container matColumnDef="postal">
+        <th mat-header-cell *matHeaderCellDef> To Postalcode </th>
+        <td mat-cell *matCellDef="let invo"> {{invo.postal}} </td>
+      </ng-container>
+      <ng-container matColumnDef="arrival">
+        <th mat-header-cell *matHeaderCellDef> Arrival Type </th>
+        <td mat-cell *matCellDef="let invo"> {{invo.arrival}} </td>
+      </ng-container>
+      <ng-container matColumnDef="quantity">
+        <th mat-header-cell *matHeaderCellDef> Quantity </th>
+        <td mat-cell *matCellDef="let invo"> {{invo.quantity}} </td>
+      </ng-container>
+      <ng-container matColumnDef="quantityunit">
+        <th mat-header-cell *matHeaderCellDef> QuantityUnits</th>
+        <td mat-cell *matCellDef="let invo"> {{invo.quantityunit}} </td>
+      </ng-container>
+      <ng-container matColumnDef="totalweight">
+        <th mat-header-cell *matHeaderCellDef> Weight </th>
+        <td mat-cell *matCellDef="let invo"> {{invo.totalweight}} </td>
+      </ng-container>
+      <ng-container matColumnDef="weightunit">
+        <th mat-header-cell *matHeaderCellDef> Weight Units </th>
+        <td mat-cell *matCellDef="let invo"> {{invo.weightunit}} </td>
+      </ng-container>
+      <ng-container matColumnDef="dimensions">
+        <th mat-header-cell *matHeaderCellDef> Dimensions </th>
+        <td mat-cell *matCellDef="let invo"> {{invo.dimensions}} </td>
+      </ng-container>
+      <ng-container matColumnDef="dimensionsunit">
+        <th mat-header-cell *matHeaderCellDef> Dimension Units </th>
+        <td mat-cell *matCellDef="let invo"> {{invo.dimensionsunit}} </td>
+      </ng-container>
+      <ng-container matColumnDef="stackable">
+        <th mat-header-cell *matHeaderCellDef> Stackable </th>
+        <td mat-cell *matCellDef="let invo"> {{invo.stackable}} </td>
+      </ng-container>
+      <ng-container matColumnDef="hazardous">
+        <th mat-header-cell *matHeaderCellDef> Hazardous </th>
+        <td mat-cell *matCellDef="let invo"> {{invo.hazardous}} </td>
+      </ng-container>
+      <ng-container matColumnDef="insurance">
+        <th mat-header-cell *matHeaderCellDef> Insurance </th>
+        <td mat-cell *matCellDef="let invo"> {{invo.insurance}} </td>
+      </ng-container>
+      <ng-container matColumnDef="incotermsunit">
+        <th mat-header-cell *matHeaderCellDef> Incoterms </th>
+        <td mat-cell *matCellDef="let invo"> {{invo.incotermsunit}} </td>
+      </ng-container>
+      <ng-container matColumnDef="comment">
+        <th mat-header-cell *matHeaderCellDef>Comments</th>
+        <td mat-cell *matCellDef="let invo"> {{invo.comment}} </td>
+      </ng-container>
+
+    <ng-container matColumnDef="taxes">
+      <th mat-header-cell *matHeaderCellDef> Taxes </th>
+      <td mat-cell *matCellDef="let invo"><input> {{invo.taxes}} </td>
+    </ng-container>
+    <ng-container matColumnDef="amount">
+      <th mat-header-cell *matHeaderCellDef> Amount </th>
+      <td mat-cell *matCellDef="let invo"><input> {{invo.amount}} </td>
+    </ng-container>
+    <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef class="mat-column-right">Action</th>
+        <td mat-cell *matCellDef="let po" class="mat-column-right">
+          <button mat-button color="primary" >Submit</button>
+        </td>
+      </ng-container>
+  
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+</mat-card>

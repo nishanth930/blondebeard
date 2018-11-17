@@ -1,0 +1,123 @@
+<mat-toolbar>
+  <h3>Quotations</h3>
+</mat-toolbar>
+<form  class="edit-form">
+  <table mat-table [dataSource]="dataSource" class="table table-striped table-bordered">
+        <ng-container matColumnDef="consignee"   >
+            <th mat-header-cell *matHeaderCellDef>Consignee</th>
+            <td mat-cell *matCellDef="let product"> {{product.consignee}} </td>
+          </ng-container>
+    <ng-container matColumnDef="shippingType"   >
+      <th mat-header-cell *matHeaderCellDef>ShippingType</th>
+      <td  mat-cell *matCellDef="let product"> {{product.shippingType}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Country" >
+      <th class="st" mat-header-cell *matHeaderCellDef>FromCountry</th>
+      <td  mat-cell *matCellDef="let product"> {{product.Country}} </td>
+    </ng-container>
+    <ng-container matColumnDef="City" >
+      <th mat-header-cell *matHeaderCellDef> From City </th>
+      <td mat-cell *matCellDef="let product"> {{product.City}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="State" >
+      <th mat-header-cell *matHeaderCellDef> From State </th>
+      <td mat-cell *matCellDef="let product"> {{product.State}} </td>
+    </ng-container>
+    <ng-container matColumnDef="Postal" >
+      <th mat-header-cell *matHeaderCellDef>FromPostcode</th>
+      <td mat-cell *matCellDef="let product"> {{product.Postal}} </td>
+    </ng-container>
+    <ng-container matColumnDef="departure">
+      <th mat-header-cell *matHeaderCellDef> Departure</th>
+      <td mat-cell *matCellDef="let product"> {{product.departure}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="country" >
+      <th mat-header-cell *matHeaderCellDef> To Country </th>
+      <td mat-cell *matCellDef="let product"> {{product.country}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="city" >
+      <th mat-header-cell *matHeaderCellDef> To City </th>
+      <td mat-cell *matCellDef="let product"> {{product.city}} </td>
+    </ng-container>
+    <ng-container matColumnDef="state" >
+      <th mat-header-cell *matHeaderCellDef> To State </th>
+      <td mat-cell *matCellDef="let product"> {{product.state}} </td>
+    </ng-container>
+    <ng-container matColumnDef="postal" >
+      <th mat-header-cell *matHeaderCellDef>ToPostcode</th>
+      <td mat-cell *matCellDef="let product"> {{product.postal}} </td>
+    </ng-container>
+    <ng-container matColumnDef="arrival" >
+      <th mat-header-cell *matHeaderCellDef>Arrival</th>
+      <td mat-cell *matCellDef="let product"> {{product.arrival}} </td>
+    </ng-container>
+    <ng-container matColumnDef="quantity" >
+      <th mat-header-cell *matHeaderCellDef> Quantity </th>
+      <td mat-cell *matCellDef="let product"> {{product.quantity}} </td>
+    </ng-container>
+    <ng-container matColumnDef="quantityunit" >
+      <th mat-header-cell *matHeaderCellDef> QuantityUnits</th>
+      <td mat-cell *matCellDef="let product"> {{product.quantityunit}} </td>
+    </ng-container>
+    <ng-container matColumnDef="totalweight" >
+      <th mat-header-cell *matHeaderCellDef> Weight </th>
+      <td mat-cell *matCellDef="let product"> {{product.totalweight}} </td>
+    </ng-container>
+    <ng-container matColumnDef="weightunit" >
+      <th mat-header-cell *matHeaderCellDef> Weight Units </th>
+      <td mat-cell *matCellDef="let product"> {{product.weightunit}} </td>
+    </ng-container>
+    <ng-container matColumnDef="length" >
+      <th mat-header-cell *matHeaderCellDef> Length </th>
+      <td mat-cell *matCellDef="let product"> {{product.length}} </td>
+    </ng-container>
+    <ng-container matColumnDef="width" >
+        <th mat-header-cell *matHeaderCellDef> Width </th>
+        <td mat-cell *matCellDef="let product"> {{product.width}} </td>
+      </ng-container>
+      <ng-container matColumnDef="height" >
+          <th mat-header-cell *matHeaderCellDef> Height </th>
+          <td mat-cell *matCellDef="let product"> {{product.height}} </td>
+        </ng-container>
+    <ng-container matColumnDef="units" >
+      <th mat-header-cell *matHeaderCellDef> Units </th>
+      <td mat-cell *matCellDef="let product"> {{product.units}} </td>
+    </ng-container>
+    <ng-container matColumnDef="stackable" >
+      <th mat-header-cell *matHeaderCellDef> Stackable </th>
+      <td mat-cell *matCellDef="let product"> {{product.stackable}} </td>
+    </ng-container>
+    <ng-container matColumnDef="hazardous" >
+      <th mat-header-cell *matHeaderCellDef> Hazardous </th>
+      <td mat-cell *matCellDef="let product"> {{product.hazardous}} </td>
+    </ng-container>
+    <ng-container matColumnDef="insurance" >
+      <th mat-header-cell *matHeaderCellDef> Insurance </th>
+      <td mat-cell *matCellDef="let product"> {{product.insurance}} </td>
+    </ng-container>
+    <ng-container matColumnDef="incotermsunit" >
+      <th mat-header-cell *matHeaderCellDef> Incoterms </th>
+      <td mat-cell *matCellDef="let product"> {{product.incotermsunit}} </td>
+    </ng-container>
+    <ng-container matColumnDef="comment" >
+      <th mat-header-cell *matHeaderCellDef>Comments</th>
+      <td mat-cell *matCellDef="let product"> {{product.comment}} </td> 
+    </ng-container>
+    <ng-container matColumnDef="amount" >
+      <th mat-header-cell *matHeaderCellDef> Amount </th>
+      <td mat-cell *matCellDef="let product">{{product.amount}} </td>
+    </ng-container>
+    <ng-container matColumnDef="action">
+        <th mat-header-cell *matHeaderCellDef class="mat-column-right">Action</th>
+        <td mat-cell *matCellDef="let product" class="mat-column-right">
+          <button mat-button color="primary"   (click)="editBtnHandler(product._id)"><mat-icon>create</mat-icon>Edit</button>
+        </td>
+      </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+  
+</form>

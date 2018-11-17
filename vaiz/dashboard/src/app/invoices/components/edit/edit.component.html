@@ -1,0 +1,104 @@
+<div>
+  <mat-card>
+    <section class="mat-typography">
+      <h3>Update Item</h3>
+    </section>
+    
+    <form class="edit-form" [formGroup]="quoteForm" >
+      <mat-card-content>
+       <mat-form-field  style="width:200px !important"  >
+              <input matInput placeholder="Email" formControlName="email" readonly class="fv" #email>  
+      </mat-form-field> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <mat-form-field>
+              <input matInput placeholder="Company"  formControlName="company" readonly class="fs"  #company>  
+      </mat-form-field></mat-card-content>
+            <br>
+            <mat-form-field  class="sts" style="width:200px !important" >  
+                <input matInput placeholder="Shipping Type"  formControlName="shippingType" readonly class="stt" #shippingType>
+                </mat-form-field ><br>
+                <mat-card-content>
+    <mat-form-field  style="width:200px !important"  >
+      <input matInput placeholder="From Country" formControlName="Country" readonly class="fv" #Country>  
+    </mat-form-field> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+      <input matInput placeholder=" To Country"  formControlName="country" readonly class="fs"  #country>  
+    </mat-form-field>
+    <br>
+    <mat-form-field style="width:200px !important">
+      <input matInput placeholder=" From City" formControlName="City" readonly class="fv" #City>
+    </mat-form-field> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+        <input matInput placeholder="To City" formControlName="city" readonly #city>
+    </mat-form-field>  <br>
+    <mat-form-field style="width:200px !important" >
+      <input matInput placeholder=" From State" formControlName="State" readonly class="fv" #State>
+    </mat-form-field> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+        <input matInput placeholder="To State" formControlName="state" readonly  #state>
+    </mat-form-field>  <br>
+    <mat-form-field style="width:200px !important" >
+      <input matInput placeholder=" From Zipcode" formControlName="Postal" readonly class="fv" #Postal>
+    </mat-form-field> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+        <input  matInput placeholder="To Zipcode" formControlName="postal" readonly #postal >
+    </mat-form-field>  <br>
+    <mat-form-field style="width:200px !important" >
+      <input  matInput placeholder="Departure Type" formControlName="departure" readonly class="fv" #departure>
+    </mat-form-field> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+        <input matInput placeholder="Arrival Type"  formControlName="arrival" readonly #arrival>
+    </mat-form-field>  <br>
+
+      </mat-card-content>
+      <mat-card-content>
+    <mat-form-field >
+      <input matInput placeholder="Quantity"  formControlName="quantity" readonly #quantity>
+    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+      <input matInput placeholder="Quantityunit" formControlName="quantityunit" readonly  #quantityunit>
+    </mat-form-field><br>
+    <mat-form-field >
+      <input matInput placeholder="Totalweight" formControlName="totalweight" readonly #totalweight>
+    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field >
+      <input  matInput placeholder="Weightunit" formControlName="weightunit" readonly #weightunit>
+    </mat-form-field><br>
+    <mat-form-field class="ut">
+        <input matInput placeholder="Length" formControlName="length" readonly class="ut" #length>
+      </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field class="ut" >
+          <input matInput placeholder="Width" formControlName="width" readonly class="ut"  #width>
+      </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <mat-form-field class="ut">
+          <input matInput placeholder="Height" formControlName="height" readonly class="ut"  #height>
+      </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <mat-form-field class="ut" >
+          <input matInput placeholder="Units" formControlName="units" readonly class="ut" #units>
+      </mat-form-field>
+      <br>
+    <mat-form-field >
+      <input matInput placeholder="Stackable" formControlName="stackable" readonly #stackable>
+    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+      <input matInput placeholder="Hazardous" formControlName="hazardous" readonly #hazardous>
+    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field>
+      <input matInput placeholder="Insurance" formControlName="insurance" readonly #insurance>
+    </mat-form-field><br>
+    <mat-form-field >
+      <input matInput placeholder="Incotermsunit" formControlName="incotermsunit" readonly #incotermsunit>
+    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <mat-form-field >
+      <input matInput placeholder="Comment" formControlName="comment" readonly #comment>
+    </mat-form-field>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    <br>
+    <mat-form-field >
+      <input matInput placeholder="Amount" formControlName="amount"  #amount>
+    </mat-form-field>
+  </mat-card-content>
+      <button type="submit" (click)="updateQuote(email.value,company.value,shippingType.value, Country.value, City.value, State.value, Postal.value, departure.value, country.value, city.value, state.value, postal.value, arrival.value, quantity.value,quantityunit.value,totalweight.value,weightunit.value,length.value,width.value,height.value,units.value, stackable.value, hazardous.value, insurance.value, incotermsunit.value, comment.value,amount.value)" mat-raised-button color="primary">Save</button>
+  
+</form> 
+
+</mat-card>
+</div>

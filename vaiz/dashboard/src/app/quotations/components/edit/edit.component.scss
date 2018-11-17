@@ -1,0 +1,29 @@
+.edit-form {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20% 0 25%;
+    font-size: 30%
+  }
+  
+  .edit-form > * {
+    width:100%;
+  }
+  .st{
+    text-align: center;
+    align-items: center;
+    align-self: center
+  }
+  
+  .fv{
+   align-self: flex-start;
+  }
+  .st{
+    align-self: flex-end;
+
+  }
+  .ut{
+    width:15%
+  }
+  .sts{
+    align-self: center
+  }
